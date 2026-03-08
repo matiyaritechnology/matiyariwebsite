@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 12%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 12%;
+
+    --primary: 152 55% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 95%;
+    --secondary-foreground: 210 20% 12%;
+
+    --muted: 150 10% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 152 40% 92%;
+    --accent-foreground: 152 55% 28%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 152 55% 38%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 20% 12%;
+    --sidebar-primary: 152 55% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 15% 95%;
+    --sidebar-accent-foreground: 210 20% 12%;
+    --sidebar-border: 210 15% 90%;
+    --sidebar-ring: 152 55% 38%;
+
+    /* Custom tokens */
+    --surface-elevated: 0 0% 100%;
+    --surface-sunken: 150 10% 97%;
+    --green-50: 150 40% 96%;
+    --green-100: 150 35% 90%;
+    --green-600: 152 55% 38%;
+    --green-700: 152 55% 30%;
+    --green-800: 152 55% 22%;
+    --text-heading: 210 25% 10%;
+    --text-body: 210 12% 40%;
+    --text-subtle: 210 8% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl shadow-sm;
+  }
+
+  .glass-card-hover {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl shadow-sm hover:shadow-[0_0_30px_#22c55e26] hover:border-primary/50 transition-all duration-500 hover:-translate-y-1;
+  }
+
+  .green-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(152, 70%, 55%), hsl(152, 70%, 35%));
+  }
+
+  .section-light {
+    background-color: hsl(var(--background));
+  }
+
+  .section-alt {
+    background-color: hsl(var(--surface-sunken));
+  }
+
+  .green-glow {
+    box-shadow: 0 0 80px -10px hsl(152, 70%, 45%, 0.3);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-heading {
+    color: hsl(var(--text-heading));
+  }
+
+  .text-body {
+    color: hsl(var(--text-body));
+  }
+
+  .text-subtle {
+    color: hsl(var(--text-subtle));
+  }
+
+  .badge-green {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background-color: hsl(var(--green-50));
+    color: hsl(var(--green-600));
+    border: 1px solid hsl(var(--green-100));
+  }
+
+  .stat-number {
+    @apply text-4xl md:text-5xl font-extrabold tracking-tight;
+    color: hsl(var(--green-600));
+  }
+}
