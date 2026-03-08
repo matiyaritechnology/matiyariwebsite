@@ -22,12 +22,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-        ? "bg-background/70 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/10"
+        ? "bg-background/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-b border-border/50"
         : "bg-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#home" className={`text-2xl font-extrabold tracking-tight transition-colors ${scrolled ? "text-heading" : "text-white"} green-gradient-text drop-shadow-[0_0_15px_rgba(34,197,94,0.3)]`}>
+        <a href="#home" className={`text-2xl font-extrabold tracking-tight transition-colors ${scrolled ? "text-heading" : "text-white"} green-gradient-text`}>
           KAAI
         </a>
 
