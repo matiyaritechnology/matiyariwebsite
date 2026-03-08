@@ -11,7 +11,7 @@ const HeroSection = () => {
           alt="KAAI bioengineered air purification device in urban setting"
           className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
